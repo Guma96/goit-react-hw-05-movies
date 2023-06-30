@@ -2,7 +2,7 @@ import { AppMenu } from './AppMenu/AppMenu';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 
-export const Layout = () => {
+const Layout = () => {
   return (
     <>
       <AppMenu />
@@ -12,3 +12,4 @@ export const Layout = () => {
     </>
   );
 };
+export default Layout;

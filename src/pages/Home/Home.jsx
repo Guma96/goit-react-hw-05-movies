@@ -9,10 +9,9 @@ import { useEffect, useState } from 'react';
 import Notiflix from 'notiflix';
 import { fetchTrendingApi } from '../../api/fetchApi';
 
-export const Home = () => {
+const Home = () => {
   const [trendings, setTrendings] = useState([]);
   useEffect(() => {
-
     async function moviesFetch() {
       try {
         const { results } = await fetchTrendingApi();
@@ -53,3 +52,4 @@ export const Home = () => {
     </>
   );
 };
+export default Home;

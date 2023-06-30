@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { fetchReview } from 'api/fetchApi';
 import { ReviewsError } from './Reviews.styled';
 
-export const Reviews = () => {
+const Reviews = () => {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
 
@@ -40,3 +40,4 @@ export const Reviews = () => {
     </div>
   );
 };
+export default Reviews;

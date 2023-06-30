@@ -11,7 +11,7 @@ import {
 } from '../Pages.styled';
 import { MovieCard } from 'components/MovieDetailsCard/MovieDetailsCard';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const location = useLocation();
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
@@ -62,3 +62,4 @@ export const MovieDetails = () => {
     </>
   );
 };
+export default MovieDetails;

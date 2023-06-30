@@ -1,6 +1,6 @@
 import { NotFoundBlock, NotFoundText, NotFoundLink } from '../Pages.styled';
 
-export const NotFound = () => {
+const NotFound = () => {
   return (
     <NotFoundBlock>
       <NotFoundText>Sorry, something wrong</NotFoundText>
@@ -8,3 +8,4 @@ export const NotFound = () => {
     </NotFoundBlock>
   );
 };
+export default NotFound;
