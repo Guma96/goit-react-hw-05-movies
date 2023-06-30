@@ -66,8 +66,4 @@ export const Cast = () => {
   );
 };
 
-export default lazy(() =>
-  import('./Cast').then(module => ({
-    default: module.Cast,
-  }))
-);
+export default Cast;
