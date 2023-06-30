@@ -8,10 +8,19 @@ export const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetchReview(Number(movieId)).then(({ results }) => setReviews(results));
+    const fetchReviews = async () => {
+      try {
+        const { results } = await fetchReview(Number(movieId));
+        setReviews(results);
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      }
+    };
+
+    fetchReviews();
   }, [movieId]);
 
-  if (reviews < 1) {
+  if (reviews.length < 1) {
     return <ReviewsError>Sorry, we don't have any reviews!</ReviewsError>;
   }
 

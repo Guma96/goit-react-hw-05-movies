@@ -11,17 +11,24 @@ export const Cast = () => {
   const [actors, setActors] = useState();
 
   useEffect(() => {
-    setLoading(true);
-    fetchCast(Number(movieId))
-      .then(setActors)
-      .catch(error =>
+    const fetchActors = async () => {
+      setLoading(true);
+      try {
+        const actorsData = await fetchCast(Number(movieId));
+        setActors(actorsData);
+      } catch (error) {
         Notify.failure(
           'Ooops, something broke. Try again please... ',
           error.messages
-        )
-      )
-      .finally(setLoading(false));
+        );
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchActors();
   }, [movieId]);
+
   if (!actors) {
     return null;
   }
