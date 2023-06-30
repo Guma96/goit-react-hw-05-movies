@@ -1,6 +1,6 @@
 import { NavItem, NavList } from './AppMenu.styled';
 
-const AppMenu = () => {
+export const AppMenu = () => {
   return (
     <NavList>
       <NavItem to="/">Home</NavItem>
@@ -8,4 +8,3 @@ const AppMenu = () => {
     </NavList>
   );
 };
-export default AppMenu;
