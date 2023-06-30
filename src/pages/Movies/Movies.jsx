@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   LinkItem,
   MovieTitle,
@@ -12,7 +13,7 @@ import { useLocation, useSearchParams } from 'react-router-dom';
 import Notiflix from 'notiflix';
 import { fetchSearchApi } from 'api/fetchApi';
 
-export const Movies = () => {
+export default function Movies() {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [input, setInput] = useState('');
@@ -90,4 +91,4 @@ export const Movies = () => {
       )}
     </>
   );
-};
+}
