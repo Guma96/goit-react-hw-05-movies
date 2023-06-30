@@ -11,7 +11,7 @@ import {
 } from './MovieDetailsCard.styled';
 import PropTypes from 'prop-types';
 
-const MovieCard = ({ movie }) => {
+export const MovieCard = ({ movie }) => {
   const { overview, title, release_date, genres, vote_average } = movie;
 
   let posterPath;
@@ -57,4 +57,3 @@ MovieCard.propTypes = {
     ),
   }),
 };
-export default MovieCard;
