@@ -12,3 +12,8 @@ export const Layout = () => {
     </>
   );
 };
+export default lazy(() =>
+  import('./Layout').then(module => ({
+    default: module.Cast,
+  }))
+);

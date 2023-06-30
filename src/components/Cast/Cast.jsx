@@ -5,7 +5,7 @@ import { Notify } from 'notiflix';
 import { ActorsCard, ActorsList, ActorsName } from './Cast.styled.jsx';
 import { Circles } from 'react-loader-spinner';
 
-const Cast = () => {
+export const Cast = () => {
   const [loading, setLoading] = useState(false);
   const { movieId } = useParams();
   const [actors, setActors] = useState();
@@ -65,6 +65,7 @@ const Cast = () => {
     </ActorsList>
   );
 };
+
 export default lazy(() =>
   import('./Cast').then(module => ({
     default: module.Cast,
