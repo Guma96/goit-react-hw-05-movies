@@ -1,5 +1,5 @@
-import React, { lazy, useState, useEffect } from 'react';
 import { fetchCast } from '../../api/fetchApi';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Notify } from 'notiflix';
 import { ActorsCard, ActorsList, ActorsName } from './Cast.styled.jsx';
@@ -65,5 +65,3 @@ export const Cast = () => {
     </ActorsList>
   );
 };
-
-export default Cast;
